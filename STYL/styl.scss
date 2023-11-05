@@ -1,0 +1,483 @@
+@import "./mixins";
+
+body {
+    margin: 0;
+    background-color: #1b1a17;
+}
+
+#header {
+    background-color: #1b1a17;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 120px;
+    padding-top: 20px;
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        padding: 0 120px;
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    @include mobile {
+        flex-direction: row !important;
+        padding: 7px 8px;
+    }
+
+    .head {
+        @include mobile {
+            display: none;
+        }
+
+        &__list {
+            list-style-type: none;
+            display: flex;
+            // gap: 30px;
+            width: 500px;
+            justify-content: space-around;
+
+            @include tablet {
+                // gap: 60px;
+            }
+
+            &-name {
+                color: #f0e3ca;
+                font-family: Inconsolata;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .burger {
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+    }
+}
+
+#main {
+    background-color: #1b1a17;
+    margin-top: 72px;
+
+    #heroes {
+        display: flex;
+        align-items: center;
+        padding: 0 113px;
+        gap: 30px;
+        justify-content: center;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        .texts {
+            display: flex;
+            width: 520px;
+            flex-direction: column;
+            // text-align: center;
+
+            &-name {
+                color: #ff8303;
+                font-family: Inconsolata;
+                font-size: 64px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: normal;
+
+                @include tablet {
+                    margin-bottom: 6px;
+                }
+
+                @include mobile {
+                    color: #ff8303;
+                    font-family: Inconsolata;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: normal;
+                }
+            }
+
+            &-ocuppation {
+                color: #f0e3ca;
+                font-family: Inconsolata;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+
+                @include tablet {
+                    margin: 0;
+                }
+
+                @include mobile {
+                    color: #f0e3ca;
+                    font-family: Inconsolata;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+
+            &-text {
+                color: #f0e3ca;
+                font-family: Inconsolata;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                @include tablet {
+                    margin-top: 17px;
+                }
+
+                @include mobile {
+                    color: #f0e3ca;
+                    font-family: Inconsolata;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+
+        .img {
+            &__foto {
+                width: 570px;
+                // height: 470px;
+
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #texts {
+        padding: 80px 356px;
+
+        @include tablet {
+            padding: 64px;
+        }
+
+        @include mobile {
+            padding: 64px;
+        }
+
+        .container {
+            display: flex;
+            // width: 900px;
+            // justify-content: space-between;
+
+            @include mobile {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            &__icon {
+                margin-right: 30px;
+            }
+
+            &__text {
+                color: #f0e3ca;
+                font-family: Inconsolata;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+
+    #tools {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 60px 0px;
+
+        .title {
+            color: #ff8303;
+            text-align: center;
+            font-family: Inconsolata;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 32px;
+        }
+
+        .tool {
+            display: flex;
+
+            @include tablet {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            &__icon {
+                background: #21201d;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                width: 200px;
+                height: 300px;
+                border-radius: 10px;
+                margin-right: 16px;
+
+                @include tablet {
+                    margin-bottom: 16px;
+                }
+
+                @include mobile {
+                    display: flex;
+                    width: 285px;
+                    height: 60px;
+                    padding: 0px 32px;
+                    align-items: center;
+                    gap: 16px;
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                &-img {
+                    width: 113.459px;
+                    height: 128.271px;
+                    margin-top: 61px;
+
+                    @include mobile {
+                        width: 28.305px;
+                        height: 32px;
+                        margin: 0;
+                    }
+                }
+
+                &-name {
+                    color: #fff;
+                    font-family: Arial;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-top: 16px;
+                    margin-bottom: 57px;
+
+                    @include mobile {
+                        color: #fff;
+                        font-family: Inconsolata;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    #portfolio {
+        padding: 64px 0px;
+
+        .work {
+            color: #ff8303;
+            text-align: center;
+            font-family: Inconsolata;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 32px;
+        }
+
+        #container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #black {
+                background-image: url(../Img/Rectangle\ 16.png);
+                background-repeat: no-repeat;
+                width: 320px;
+                height: 320px;
+                margin-right: 16px;
+
+                @include tablet {
+                    margin-bottom: 16px;
+                }
+
+                .black {
+                    background: rgba(33, 32, 29, 0.98);
+                    width: 320px;
+                    height: 320px;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &__new {
+                        color: #ff8303;
+                        font-family: Inconsolata;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        margin-top: 40px;
+                        margin-bottom: 16px;
+                    }
+
+                    &__languages {
+                        color: #f0e3ca;
+                        font-family: Inconsolata;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        margin: 0;
+                    }
+
+                    &__line {
+                        width: 200px;
+                        height: 1px;
+                        background: #a35709;
+                        margin-top: 16px;
+                        margin-bottom: 16px;
+                    }
+
+                    &__text {
+                        color: #f0e3ca;
+                        font-family: Inconsolata;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        margin: 0;
+                    }
+
+                    &__btn {
+                        color: #f0e3ca;
+                        font-family: Inconsolata;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        display: flex;
+                        padding: 12px 20px;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        border-radius: 4px;
+                        background: #32312e;
+                        border: none;
+                        margin-top: 16px;
+                    }
+                }
+            }
+
+            .card {
+                margin-right: 16px;
+
+                @include tablet {
+                    margin-bottom: 16px;
+                }
+
+                &__img {
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 64px 0;
+
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+        gap: 63px;
+    }
+
+    
+    .loqo {
+        &__img {
+        }
+
+        &__texts {
+            color: #f0e3ca;
+            font-family: Inconsolata;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    #new {
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .contacts {
+            display: flex;
+
+            @include mobile{
+                flex-direction: column
+            }
+
+            &__title {
+                color: #ff8303;
+                font-family: Inconsolata;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin: 0;
+            }
+
+            #icon {
+                margin-right: 30px;
+                .icon {
+                    display: flex;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+
+                    &-img {
+                        margin-right: 16px;
+                    }
+
+                    &-name {
+                        color: #ff8303;
+                        font-family: Inconsolata;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+}
